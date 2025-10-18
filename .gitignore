@@ -1,0 +1,20 @@
+# Secrets / SSH
+.ssh/
+id_ed25519
+id_ed25519.pub
+*.pem
+*.key
+
+# Env & logs
+.env
+.env.*
+*.log
+
+# Backups / archives
+*.tgz
+*.tar
+*.zip
+
+# Misc system noise
+snap/
+.DS_Store
