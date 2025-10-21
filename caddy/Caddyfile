@@ -1,0 +1,25 @@
+{
+  email admin@aibizsolutions.org
+}
+
+aibizsolutions.org, www.aibizsolutions.org {
+  encode gzip zstd
+  reverse_proxy wordpress:80
+}
+
+n8n.aibizsolutions.org {
+  encode gzip
+  reverse_proxy n8n:5678
+}
+
+api.aibizsolutions.org {
+  encode gzip
+  reverse_proxy endpoints:3000
+}
+
+# To expose the Ollama API publicly, uncomment the block below and point DNS to this server.
+# Use access controls if you decide to expose it on the internet.
+# llm.aibizsolutions.org {
+#   encode gzip
+#   reverse_proxy ollama:11434
+# }
